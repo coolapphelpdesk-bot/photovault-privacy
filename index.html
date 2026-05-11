@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PhotoVault — Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    max-width: 720px; margin: 40px auto; padding: 0 20px;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1c1b1f; background: #fffbfe;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e6e1e5; background: #111014; }
+    a { color: #d0bcff; }
+  }
+  h1 { font-size: 28px; margin: 0 0 4px; letter-spacing: -0.02em; }
+  h2 { font-size: 20px; margin-top: 32px; }
+  h3 { font-size: 16px; margin-top: 24px; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 14px; }
+  th, td { border: 1px solid rgba(127,127,127,0.3); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: rgba(127,127,127,0.08); }
+  code { background: rgba(127,127,127,0.12); padding: 1px 5px; border-radius: 4px; font-size: 0.92em; }
+  small { color: #777680; }
+  ul { padding-left: 22px; }
+</style>
+</head>
+<body>
+
+<h1>PhotoVault — Privacy Policy</h1>
+<small>Last updated: 2026-04-27</small>
+
+<p>PhotoVault (”the app”, ”we”, ”our”) is published by
+<strong>Azura Group</strong>. This page describes what data the app handles and how.
+Plain summary first, detail below.</p>
+
+<h2>TL;DR</h2>
+<ul>
+  <li>PhotoVault is an <strong>on-device</strong> app. We don’t operate servers,
+      we don’t have user accounts, and we do not collect, transmit or share
+      any of your data.</li>
+  <li>Photos you choose to put inside the private space — and any contacts
+      or notes you enter manually inside it — are encrypted with
+      <strong>AES-256-GCM</strong> using a key generated inside the
+      <strong>Android Keystore</strong> on your device.</li>
+  <li>The app does not embed advertising, analytics or crash-reporting SDKs.</li>
+</ul>
+
+<h2>Data we collect</h2>
+<p><strong>None.</strong> PhotoVault does not collect personal data, telemetry,
+identifiers, device information, IP addresses, or usage analytics.</p>
+
+<h2>Data the app accesses on your device</h2>
+<p>PhotoVault asks for these Android permissions, only when you use a feature that
+needs them. None of the data leaves your device.</p>
+
+<table>
+<thead>
+<tr><th>Permission</th><th>Why</th><th>When it’s asked</th></tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>READ_MEDIA_IMAGES</code> (Android 13+) /<br><code>READ_EXTERNAL_STORAGE</code> (≤12)</td>
+  <td>Display your gallery and let you import photos into the encrypted private space.</td>
+  <td>The first time you open the gallery.</td>
+</tr>
+<tr>
+  <td><code>USE_BIOMETRIC</code> (optional)</td>
+  <td>Unlock the private space with a fingerprint or face on devices that support it.</td>
+  <td>Only if you enable biometric unlock.</td>
+</tr>
+</tbody>
+</table>
+
+<p>You can revoke any permission at any time in
+Android Settings → Apps → PhotoVault → Permissions.</p>
+
+<h2>How your private data is stored</h2>
+<ul>
+  <li><strong>Live storage:</strong> encrypted blobs sit in <code>filesDir</code>
+      under your app sandbox. The encryption key is generated and stored inside
+      the Android Keystore, which on most devices is hardware-backed. The key is
+      non-extractable and tied to your app’s UID.</li>
+  <li><strong>Backups (optional):</strong> if you enable “Backup &amp; restore”
+      you choose a folder via the Storage Access Framework and supply a passphrase.
+      The backup is written to that folder encrypted with a key derived from your
+      passphrase (PBKDF2-HMAC-SHA256, 250&nbsp;000 iterations, AES-256-GCM).
+      We never see the passphrase.</li>
+  <li><strong>Sharing:</strong> when you tap “Share” on a photo inside
+      the private space, the app decrypts a copy to a private cache folder and
+      hands a <code>content://</code> URI to the system share sheet. The cache is
+      wiped after the share. We do not see what you share.</li>
+</ul>
+
+<h2>Children’s privacy</h2>
+<p>The app is not directed at children under 13. We do not knowingly collect
+information about children — and as noted above, we don’t collect
+information about anyone.</p>
+
+<h2>Changes to this policy</h2>
+<p>If material aspects of how the app handles data ever change, we will update
+this page and bump the “Last updated” date above. Continued use after
+a change constitutes acceptance.</p>
+
+<h2>Contact</h2>
+<p>Questions? Email <a href="mailto:coolapphelpdesk@gmail.com">coolapphelpdesk@gmail.com</a>.</p>
+
+</body>
+</html>
