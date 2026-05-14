@@ -1,110 +1,137 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>PhotoVault — Privacy Policy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — PhotoVault</title>
+<meta name="description" content="Privacy policy for the PhotoVault Android application by Cool App Helpdesk.">
 <style>
-  :root { color-scheme: light dark; }
-  body {
-    max-width: 720px; margin: 40px auto; padding: 0 20px;
-    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    color: #1c1b1f; background: #fffbfe;
+  :root {
+    --bg: #f8fafc; --surface: #ffffff; --text: #0f172a; --muted: #64748b;
+    --primary: #2563eb; --primary-soft: #dbeafe; --border: #e2e8f0;
+    --positive: #15803d; --positive-bg: #dcfce7;
   }
   @media (prefers-color-scheme: dark) {
-    body { color: #e6e1e5; background: #111014; }
-    a { color: #d0bcff; }
+    :root {
+      --bg: #0f172a; --surface: #1e293b; --text: #e2e8f0; --muted: #94a3b8;
+      --primary: #93c5fd; --primary-soft: #1e3a8a; --border: #334155;
+      --positive: #4ade80; --positive-bg: #14532d;
+    }
   }
-  h1 { font-size: 28px; margin: 0 0 4px; letter-spacing: -0.02em; }
-  h2 { font-size: 20px; margin-top: 32px; }
-  h3 { font-size: 16px; margin-top: 24px; }
-  table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 14px; }
-  th, td { border: 1px solid rgba(127,127,127,0.3); padding: 8px 10px; text-align: left; vertical-align: top; }
-  th { background: rgba(127,127,127,0.08); }
-  code { background: rgba(127,127,127,0.12); padding: 1px 5px; border-radius: 4px; font-size: 0.92em; }
-  small { color: #777680; }
-  ul { padding-left: 22px; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 24px 96px; }
+  header { border-radius: 16px; padding: 32px 28px; margin-bottom: 24px;
+    background: linear-gradient(135deg, #38bdf8 0%, #2563eb 55%, #1e3a8a 100%); color: #fff; }
+  header h1 { margin: 0 0 6px; font-size: 28px; font-weight: 700; letter-spacing: -0.01em; }
+  header p { margin: 0; opacity: 0.92; font-size: 15px; }
+  .card { background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 22px 26px; margin: 14px 0; }
+  h2 { font-size: 19px; font-weight: 600; margin: 0 0 12px; letter-spacing: -0.005em; }
+  p, ul, ol { margin: 0 0 12px; }
+  ul, ol { padding-left: 22px; } li { margin-bottom: 6px; }
+  .muted { color: var(--muted); font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { font-weight: 600; color: var(--muted); background: var(--primary-soft); }
+  tr:last-child td { border-bottom: none; }
+  code { background: var(--primary-soft); padding: 1px 6px; border-radius: 4px;
+    font-size: 13px; font-family: "SFMono-Regular", Consolas, Menlo, monospace; }
+  a { color: var(--primary); text-decoration: none; } a:hover { text-decoration: underline; }
+  .badge { display: inline-block; background: var(--positive-bg); color: var(--positive);
+    font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 20px; }
+  footer { margin-top: 32px; text-align: center; color: var(--muted); font-size: 13px; }
+  @media (max-width: 480px) {
+    .wrap { padding: 24px 16px 64px; }
+    header { padding: 24px 20px; } header h1 { font-size: 24px; }
+    .card { padding: 18px 20px; } h2 { font-size: 17px; }
+    table { font-size: 13px; } th, td { padding: 8px 10px; }
+  }
 </style>
 </head>
 <body>
+<main class="wrap">
 
-<h1>PhotoVault — Privacy Policy</h1>
-<small>Last updated: 2026-04-27</small>
+<header>
+  <h1>Privacy Policy</h1>
+  <p>PhotoVault &middot; last updated <time datetime="2026-05-14">May 14, 2026</time></p>
+</header>
 
-<p>PhotoVault (”the app”, ”we”, ”our”) is published by
-<strong>Azura Group</strong>. This page describes what data the app handles and how.
-Plain summary first, detail below.</p>
+<section class="card">
+  <h2>1. Summary</h2>
+  <p>PhotoVault (&ldquo;the app&rdquo;) is an on-device private photo vault published by <strong>Cool App Helpdesk</strong>.</p>
+  <ul>
+    <li>The app collects <strong>no personal data</strong> and operates no servers.</li>
+    <li>Photos, notes, and contacts you place in the vault are encrypted on your device with <strong>AES-256-GCM</strong>, using a key generated inside the Android Keystore.</li>
+    <li>The app contains <strong>no advertising, no analytics, and no crash-reporting SDKs</strong>.</li>
+  </ul>
+</section>
 
-<h2>TL;DR</h2>
-<ul>
-  <li>PhotoVault is an <strong>on-device</strong> app. We don’t operate servers,
-      we don’t have user accounts, and we do not collect, transmit or share
-      any of your data.</li>
-  <li>Photos you choose to put inside the private space — and any contacts
-      or notes you enter manually inside it — are encrypted with
-      <strong>AES-256-GCM</strong> using a key generated inside the
-      <strong>Android Keystore</strong> on your device.</li>
-  <li>The app does not embed advertising, analytics or crash-reporting SDKs.</li>
-</ul>
+<section class="card">
+  <h2>2. Data we collect</h2>
+  <p><strong>None.</strong> PhotoVault does not collect personal data, telemetry, identifiers, device information, IP addresses, or usage analytics. There are no user accounts and the developer operates no servers that the app communicates with.</p>
+</section>
 
-<h2>Data we collect</h2>
-<p><strong>None.</strong> PhotoVault does not collect personal data, telemetry,
-identifiers, device information, IP addresses, or usage analytics.</p>
+<section class="card">
+  <h2>3. Data stored on your device</h2>
+  <table>
+    <thead><tr><th>Item</th><th>Where</th><th>Sent off device?</th></tr></thead>
+    <tbody>
+      <tr><td>Encrypted vault contents (photos, notes, contacts)</td><td>App-private <code>filesDir</code>, AES-256-GCM</td><td><span class="badge">Never</span></td></tr>
+      <tr><td>Encryption key</td><td>Android Keystore (hardware-backed on most devices)</td><td><span class="badge">Never</span></td></tr>
+      <tr><td>App settings</td><td>App-private <code>SharedPreferences</code></td><td><span class="badge">Never</span></td></tr>
+      <tr><td>Optional encrypted backup</td><td>Folder you choose (Storage Access Framework); encrypted with a passphrase you choose (PBKDF2-HMAC-SHA256, 250&nbsp;000 iterations + AES-256-GCM)</td><td><span class="badge">Never</span></td></tr>
+    </tbody>
+  </table>
+  <p class="muted">The encryption key is non-extractable and tied to the app&rsquo;s UID. Backup passphrases are never seen by the developer.</p>
+</section>
 
-<h2>Data the app accesses on your device</h2>
-<p>PhotoVault asks for these Android permissions, only when you use a feature that
-needs them. None of the data leaves your device.</p>
+<section class="card">
+  <h2>4. Permissions used</h2>
+  <table>
+    <thead><tr><th>Permission</th><th>Reason</th><th>When asked</th></tr></thead>
+    <tbody>
+      <tr><td><code>READ_MEDIA_IMAGES</code> (Android 13+)<br><code>READ_EXTERNAL_STORAGE</code> (Android &le; 12)</td><td>Display your gallery and import photos into the encrypted vault.</td><td>First time you open the gallery.</td></tr>
+      <tr><td><code>USE_BIOMETRIC</code> (optional)</td><td>Unlock the vault with a fingerprint or face on supported devices.</td><td>Only if you enable biometric unlock.</td></tr>
+    </tbody>
+  </table>
+  <p>You can revoke any permission at any time in <em>Android Settings &rarr; Apps &rarr; PhotoVault &rarr; Permissions</em>.</p>
+</section>
 
-<table>
-<thead>
-<tr><th>Permission</th><th>Why</th><th>When it’s asked</th></tr>
-</thead>
-<tbody>
-<tr>
-  <td><code>READ_MEDIA_IMAGES</code> (Android 13+) /<br><code>READ_EXTERNAL_STORAGE</code> (≤12)</td>
-  <td>Display your gallery and let you import photos into the encrypted private space.</td>
-  <td>The first time you open the gallery.</td>
-</tr>
-<tr>
-  <td><code>USE_BIOMETRIC</code> (optional)</td>
-  <td>Unlock the private space with a fingerprint or face on devices that support it.</td>
-  <td>Only if you enable biometric unlock.</td>
-</tr>
-</tbody>
-</table>
+<section class="card">
+  <h2>5. Network activity and third parties</h2>
+  <p>The app does not request the <code>INTERNET</code> permission. It makes no network connections, contacts no servers, and contains no advertising, analytics, or crash-reporting SDKs. When you tap &ldquo;Share&rdquo; on an item, the app decrypts a copy into a private cache folder and passes a <code>content://</code> URI to the system share sheet; the developer does not see what you share.</p>
+</section>
 
-<p>You can revoke any permission at any time in
-Android Settings → Apps → PhotoVault → Permissions.</p>
+<section class="card">
+  <h2>6. Children&rsquo;s privacy</h2>
+  <p>The app is not directed at children under 13. We do not knowingly collect information about children &mdash; and, as noted above, we collect no information about anyone.</p>
+</section>
 
-<h2>How your private data is stored</h2>
-<ul>
-  <li><strong>Live storage:</strong> encrypted blobs sit in <code>filesDir</code>
-      under your app sandbox. The encryption key is generated and stored inside
-      the Android Keystore, which on most devices is hardware-backed. The key is
-      non-extractable and tied to your app’s UID.</li>
-  <li><strong>Backups (optional):</strong> if you enable “Backup &amp; restore”
-      you choose a folder via the Storage Access Framework and supply a passphrase.
-      The backup is written to that folder encrypted with a key derived from your
-      passphrase (PBKDF2-HMAC-SHA256, 250&nbsp;000 iterations, AES-256-GCM).
-      We never see the passphrase.</li>
-  <li><strong>Sharing:</strong> when you tap “Share” on a photo inside
-      the private space, the app decrypts a copy to a private cache folder and
-      hands a <code>content://</code> URI to the system share sheet. The cache is
-      wiped after the share. We do not see what you share.</li>
-</ul>
+<section class="card">
+  <h2>7. Data retention and deletion</h2>
+  <p>All vault contents remain on your device until you delete them inside the app, clear the app&rsquo;s storage, or uninstall the app. Optional encrypted backups stay in the folder you chose until you delete them. There is nothing for the developer to retain or delete, because nothing is transmitted.</p>
+</section>
 
-<h2>Children’s privacy</h2>
-<p>The app is not directed at children under 13. We do not knowingly collect
-information about children — and as noted above, we don’t collect
-information about anyone.</p>
+<section class="card">
+  <h2>8. Security</h2>
+  <p>Vault contents are encrypted at rest with AES-256-GCM. The encryption key is generated and held inside the Android Keystore and is non-extractable. Optional backups are protected with a key derived from a passphrase you choose, using PBKDF2-HMAC-SHA256 with 250&nbsp;000 iterations. The app is distributed through the Google Play Store, which verifies the developer signing key on every update.</p>
+</section>
 
-<h2>Changes to this policy</h2>
-<p>If material aspects of how the app handles data ever change, we will update
-this page and bump the “Last updated” date above. Continued use after
-a change constitutes acceptance.</p>
+<section class="card">
+  <h2>9. Changes to this policy</h2>
+  <p>If any material aspect of how the app handles data ever changes, this page will be updated and the &ldquo;last updated&rdquo; date above will be bumped. Continued use after a change constitutes acceptance.</p>
+</section>
 
-<h2>Contact</h2>
-<p>Questions? Email <a href="mailto:coolapphelpdesk@gmail.com">coolapphelpdesk@gmail.com</a>.</p>
+<section class="card">
+  <h2>10. Contact</h2>
+  <p>Questions or feedback? Email <a href="mailto:coolapphelpdesk@gmail.com">coolapphelpdesk@gmail.com</a>.</p>
+</section>
 
+<footer>&copy; 2026 Cool App Helpdesk &middot; PhotoVault</footer>
+
+</main>
 </body>
 </html>
